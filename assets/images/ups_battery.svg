@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="upsMetal" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="#f8fafc"/>
+  <rect x="110" y="70" width="160" height="260" rx="8" fill="url(#upsMetal)" stroke="#334155" stroke-width="3"/>
+  <rect x="135" y="100" width="110" height="45" rx="4" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+  <text x="190" y="128" fill="#ffffff" font-size="13" font-family="monospace" font-weight="bold" text-anchor="middle">400V 50.0Hz</text>
+  <circle cx="145" cy="170" r="6" fill="#22c55e"/>
+  <circle cx="165" cy="170" r="6" fill="#22c55e"/>
+  <circle cx="185" cy="170" r="6" fill="#eab308"/>
+  <rect x="310" y="70" width="180" height="260" rx="8" fill="#334155" stroke="#475569" stroke-width="3"/>
+  <rect x="325" y="95" width="150" height="35" rx="3" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="325" y="145" width="150" height="35" rx="3" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="325" y="195" width="150" height="35" rx="3" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="325" y="245" width="150" height="35" rx="3" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="300" y="370" fill="#0f2239" font-size="14" font-family="sans-serif" font-weight="bold" text-anchor="middle">THREE PHASE ONLINE UPS &amp; BATTERY BANK</text>
+</svg>
