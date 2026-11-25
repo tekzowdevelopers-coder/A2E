@@ -1,6 +1,6 @@
 /**
  * A2E POWER SYSTEM - Main JavaScript Engine
- * Handles Navigation, WhatsApp Form Integration, Client Validation, and UI Utilities
+ * Handles Navigation, Mobile Toggler, WhatsApp Form Integration, Client Validation, and UI Utilities
  */
 
 (function () {
@@ -18,6 +18,7 @@
   // DOM Content Loaded
   document.addEventListener('DOMContentLoaded', () => {
     initStickyNavbar();
+    initMobileNavBehavior();
     initBackToTop();
     initWhatsAppEnquiryForm();
     initQuickContactButtons();
@@ -38,6 +39,29 @@
         navbar.classList.remove('is-sticky');
       }
     }, { passive: true });
+  }
+
+  /**
+   * Mobile Navbar Behavior: Auto close on link click & touch friendly
+   */
+  function initMobileNavBehavior() {
+    const navbarCollapse = document.getElementById('navbarMain');
+    if (!navbarCollapse) return;
+
+    // Close mobile collapse when user clicks non-dropdown nav link
+    const navLinks = navbarCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+          if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+            bsCollapse.hide();
+          } else {
+            navbarCollapse.classList.remove('show');
+          }
+        }
+      });
+    });
   }
 
   /**
